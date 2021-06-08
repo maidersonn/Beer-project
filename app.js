@@ -1,25 +1,6 @@
-async function getData(url) {
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    throw Error;
-  }
-}
-
-const fillCatalogue = async (url, sectionToFill) => {
-  const items = await getData(`${url}`);
-
-  items.forEach((item) => {
-    const beerCard = createBeerCard(item);
-    sectionToFill.append(beerCard);
-  });
-};
-
 const createBeerCard = (item) => {
   const beerCard = document.createElement("a");
-  beerCard.setAttribute("href", "./detail.html");
+  beerCard.setAttribute("href", `./detail.html?id=${item.id}`);
   beerCard.innerHTML = `
     <div class="beerCard">
         <h4>${item.name}<h4>
@@ -28,6 +9,15 @@ const createBeerCard = (item) => {
     </div>
      `;
   return beerCard;
+};
+
+const fillCatalogue = async (url, sectionToFill) => {
+  const items = await getData(`${url}`);
+
+  items.forEach((item) => {
+    const beerCard = createBeerCard(item);
+    sectionToFill.append(beerCard);
+  });
 };
 
 let catalogue = document.getElementById("catalogue");
