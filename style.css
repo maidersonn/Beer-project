@@ -1,0 +1,21 @@
+header {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-variant: small-caps;
+}
+
+.cervezaHome {
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding: 13px;
+  width: 220px;
+  height: 220px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background: url("../images/simpson.jpg");
+  background-size: cover;
+}
+
+.cervezaHome img {
+  width: 100%;
+}
