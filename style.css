@@ -19,3 +19,7 @@ header {
 .cervezaHome img {
   width: 100%;
 }
+
+.beerCard {
+  border: 1px solid black;
+}
