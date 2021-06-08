@@ -12,16 +12,22 @@ const fillCatalogue = async (url, sectionToFill) => {
   const items = await getData(`${url}`);
 
   items.forEach((item) => {
-    console.log(item);
-    const beerCard = document.createElement("div");
-    beerCard.setAttribute("class", "beerCard");
-    beerCard.innerHTML = `
-   <h4>${item.name}<h4>
-   <h5>${item.tagline}<h5>
-   <img src='${item.image_url}' alt='Imagen de cerveza '${item.name}>
-   `;
+    const beerCard = createBeerCard(item);
     sectionToFill.append(beerCard);
   });
+};
+
+const createBeerCard = (item) => {
+  const beerCard = document.createElement("a");
+  beerCard.setAttribute("href", "./detail.html");
+  beerCard.innerHTML = `
+    <div class="beerCard">
+        <h4>${item.name}<h4>
+        <h5>${item.tagline}<h5>
+        <img src='${item.image_url}' alt='Imagen de cerveza '${item.name}>
+    </div>
+     `;
+  return beerCard;
 };
 
 let catalogue = document.getElementById("catalogue");
