@@ -1,8 +1,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 const beerId = urlParams.get("id");
 
-const paintDetailBeer = async () => {
-  const beer = await getData(`https://api.punkapi.com/v2/beers/${beerId}`);
+const paintDetailBeer = async (id) => {
+  const beer = await getData(`https://api.punkapi.com/v2/beers/${id}`);
   console.log(beer);
   const detailContainer = document.getElementById("detail");
   detailContainer.innerHTML = `
@@ -30,4 +30,4 @@ function getRandomNumber(from, to, fixed) {
   return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
 }
 
-paintDetailBeer();
+paintDetailBeer(beerId);

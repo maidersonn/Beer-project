@@ -22,4 +22,20 @@ const fillCatalogue = async (url, sectionToFill) => {
 
 let catalogue = document.getElementById("catalogue");
 
-fillCatalogue("https://api.punkapi.com/v2/beers", catalogue);
+let numPag = 1;
+const nextPage = document.getElementById("next");
+const prevPage = document.getElementById("previous");
+
+fillCatalogue("https://api.punkapi.com/v2/beers?page=" + numPag, catalogue);
+
+nextPage.addEventListener("click", () => {
+  numPag++;
+  catalogue.innerHTML = "";
+  fillCatalogue("https://api.punkapi.com/v2/beers?page=" + numPag, catalogue);
+});
+
+prevPage.addEventListener("click", () => {
+  numPag = numPag === 1 ? numPag : --numPag;
+  catalogue.innerHTML = "";
+  fillCatalogue("https://api.punkapi.com/v2/beers?page=" + numPag, catalogue);
+});
