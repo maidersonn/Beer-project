@@ -21,9 +21,13 @@ const painMap = () => {
   const map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/mapbox/streets-v11",
-    center: [-74.5, 40],
-    zoom: 9,
+    center: [getRandomNumber(-180, 180, 2), getRandomNumber(-90, 90, 2)],
+    zoom: 6,
   });
 };
+
+function getRandomNumber(from, to, fixed) {
+  return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+}
 
 paintDetailBeer();
