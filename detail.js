@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const beerId = urlParams.get("id");
 
-const detailBeer = async () => {
+const paintDetailBeer = async () => {
   const beer = await getData(`https://api.punkapi.com/v2/beers/${beerId}`);
   console.log(beer);
   const detailContainer = document.getElementById("detail");
@@ -13,4 +13,4 @@ const detailBeer = async () => {
   `;
 };
 
-detailBeer();
+paintDetailBeer();
