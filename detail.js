@@ -11,6 +11,19 @@ const paintDetailBeer = async () => {
     <p>Descripción: <br> ${beer[0].description}</p>
     <p>Volumen de alcohol: ${beer[0].abv}%</p>
   `;
+  painMap();
+};
+
+const painMap = () => {
+  mapboxgl.accessToken =
+    "pk.eyJ1IjoibWFpZGVyc29ubiIsImEiOiJja3BwaWZpOTIxY2I3MnFxcWp5cXRpY2llIn0.dpaALoCb1yPrti_QGvTlcQ";
+
+  const map = new mapboxgl.Map({
+    container: "map",
+    style: "mapbox://styles/mapbox/streets-v11",
+    center: [-74.5, 40],
+    zoom: 9,
+  });
 };
 
 paintDetailBeer();
