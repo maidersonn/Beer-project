@@ -4,17 +4,23 @@ const beerId = urlParams.get("id");
 const paintDetailBeer = async (id) => {
   const [beer] = await getData(`https://api.punkapi.com/v2/beers/${id}`);
   console.log(beer);
-  const detailContainer = document.getElementById("detail");
-  detailContainer.innerHTML = `
-    <h3>${beer.name}</h3>
-    <h4>${beer.tagline}</h4>
-    <p>Descripción: <br> ${beer.description}</p>
-    <p>Volumen de alcohol: ${beer.abv}%</p>
-  `;
-  painMap();
+
+  const detailFrame = document.getElementById("detailFrame");
+  const imageBeer = document.createElement("img");
+  imageBeer.setAttribute("src", beer.image_url);
+  imageBeer.setAttribute("alt", `Imagen de la cerveza ${beer.name}`);
+  detailFrame.prepend(imageBeer);
+
+  document.getElementById("beerName").innerHTML = beer.name;
+  document.getElementById("beerTagline").innerHTML = beer.tagline;
+  document.getElementById("descriptionInfo").innerHTML = beer.description;
+  document.getElementById("vol").innerHTML += beer.abv + "%";
+  document.getElementById("nameInRegion").innerHTML = beer.name;
+
+  paintMap();
 };
 
-const painMap = () => {
+const paintMap = () => {
   mapboxgl.accessToken =
     "pk.eyJ1IjoibWFpZGVyc29ubiIsImEiOiJja3BwaWZpOTIxY2I3MnFxcWp5cXRpY2llIn0.dpaALoCb1yPrti_QGvTlcQ";
 

@@ -29,16 +29,25 @@ let numPag = 1;
 const nextPage = document.getElementById("next");
 const prevPage = document.getElementById("previous");
 
-fillCatalogue("https://api.punkapi.com/v2/beers?page=" + numPag, catalogue);
+fillCatalogue(
+  "https://api.punkapi.com/v2/beers?page=" + numPag + "&per_page=24",
+  catalogue
+);
 
 nextPage.addEventListener("click", () => {
   numPag++;
   catalogue.innerHTML = "";
-  fillCatalogue("https://api.punkapi.com/v2/beers?page=" + numPag, catalogue);
+  fillCatalogue(
+    "https://api.punkapi.com/v2/beers?page=" + numPag + "&per_page=24",
+    catalogue
+  );
 });
 
 prevPage.addEventListener("click", () => {
   numPag = numPag === 1 ? numPag : --numPag;
   catalogue.innerHTML = "";
-  fillCatalogue("https://api.punkapi.com/v2/beers?page=" + numPag, catalogue);
+  fillCatalogue(
+    "https://api.punkapi.com/v2/beers?page=" + numPag + "&per_page=24",
+    catalogue
+  );
 });

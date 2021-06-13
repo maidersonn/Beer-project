@@ -15,10 +15,13 @@
       href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Montez&family=Philosopher&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>Beer Proyect</header>
-    <h1>Cervezas del mundo</h1>
     <div class="navFija">
       <nav class="navButtons">
         <a class="navHome" href="/index.html">Home</a>
@@ -27,9 +30,26 @@
       </nav>
     </div>
 
-    <section class="detail" id="detail"></section>
-    <section id="map" style="width: 400px; height: 300px"></section>
+    <section class="detail">
+      <div id="detailFrame" class="detailFrame">
+        <div class="detailInfo">
+          <h3 id="beerName" class="beerName"></h3>
+          <h4 id="beerTagline" class="beerTagline"></h4>
+          <p class="descriptionTag">Descripción</p>
+          <p id="descriptionInfo" class="descriptionInfo"></p>
+          <p id="vol" class="vol">Volumen de alcohol:</p>
+        </div>
+      </div>
 
+      <div class="parting"></div>
+    </section>
+    <section class="mapContainer">
+      <p class="mapTitle">
+        Región de origen de la cerveza
+        <span id="nameInRegion" class="nameInRegion"></span>
+      </p>
+      <div id="map" style="width: 800px; height: 300px"></div>
+    </section>
     <script src="common.js"></script>
     <script src="detail.js"></script>
   </body>

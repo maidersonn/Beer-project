@@ -1,7 +1,8 @@
 .homePage {
-  background-image: ;
+  background-image: url("./images/fondo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 body {
@@ -13,8 +14,8 @@ header {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-variant: small-caps;
   font-weight: 600;
-}
-.container {
+  position: fixed;
+  top: 0;
   background-color: white;
 }
 
@@ -26,16 +27,20 @@ h1 {
 h3 {
   text-align: center;
   font-size: 30px;
+  font-family: "Satisfy", cursive;
 }
 
 .introduction {
-  font-size: 22px;
+  font-size: 25px;
+  font-family: "Merienda", cursive;
+  text-align: center;
+  padding-left: 70px;
 }
 
 .cervezaHome {
   margin: 10px auto;
   border-radius: 5px;
-  border: 1px solid #999;
+
   padding: 13px;
   width: 220px;
   height: 220px;
@@ -48,6 +53,12 @@ h3 {
 .cervezaHome img {
   width: 100%;
 }
+
+.container {
+  margin-top: 150px;
+}
+
+/* Catalogo */
 
 .beerCard {
   margin: 0.5rem;
@@ -90,7 +101,7 @@ h3 {
   text-decoration: none;
 }
 
-img {
+.beerCard img {
   max-width: 80%;
   max-height: 50%;
 }
@@ -100,6 +111,15 @@ img {
   text-align: center;
 }
 
+.itemName {
+  font-size: 24px;
+  font-family: "Lobster Two", cursive;
+}
+
+.itemTagline {
+  font-size: 18px;
+  font-family: "Philosopher", sans-serif;
+}
 /* Navegacion */
 
 .navFija {
@@ -133,20 +153,80 @@ img {
   padding-left: 20px;
 }
 
-.itemName {
-  font-size: 24px;
-  font-family: "Lobster Two", cursive;
-}
-
-.itemTagline {
-  font-size: 18px;
-  font-family: "Philosopher", sans-serif;
-}
 .navButtons a:hover {
   opacity: 0.5;
 }
 
-h3 {
-  font-family: "Satisfy", cursive;
+/* Random page */
+
+.detailFrame {
+  margin-left: 10em;
+  margin-top: 120px;
+  padding: 1rem;
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+  flex-direction: row;
+}
+
+.detailFrame img {
+  max-width: 60%;
+  height: 70vh;
+  margin-left: 7rem;
+}
+
+.detailInfo {
+  max-width: 50%;
+  text-align: left;
+}
+
+.detailInfo h3,
+h4 {
+  text-align: left;
+}
+
+.beerName {
+  font-size: 80px;
+}
+
+.beerTagline {
   font-size: 30px;
+}
+
+.descriptionTag {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.descriptionInfo,
+.vol {
+  font-family: "Dosis", sans-serif;
+  font-size: 24px;
+}
+
+.nameInRegion {
+  font-style: italic;
+}
+
+.parting {
+  border-bottom: 4px solid #dadada;
+  margin-bottom: 70px;
+  margin-top: 50px;
+  margin-left: 200px;
+  width: 80%;
+}
+
+.mapTitle {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.mapContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
