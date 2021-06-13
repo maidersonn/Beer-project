@@ -3,9 +3,9 @@ const createBeerCard = (item) => {
   beerCard.setAttribute("href", `./detail.html?id=${item.id}`);
   beerCard.innerHTML = `
     <div class="beerCard">
-      <div class="beerInfo">
-        <p>${item.name}</p>
-        <p>${item.tagline}</p>
+      <div class="beerInfo">"
+        <p class="itemName">${item.name}</p>
+        <p class="itemTagline">${item.tagline}</p>
       </div>
       <img src='${item.image_url}' alt='Imagen de cerveza '${item.name}>
 

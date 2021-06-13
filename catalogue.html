@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalogo</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Montez&family=Philosopher&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>Beer Proyect</header>
     <h1>Cervezas del mundo</h1>
-    <h5>Todas las cervezas</h5>
-    <nav class="butons">
-      <a href="/index.html">Home</a>
-      <a href="/catalogue.html">Todas las cervezas</a>
-      <a href="/detail.html?id=random">Cerveza random</a>
-    </nav>
+    <div class="navFija">
+      <nav class="navButtons">
+        <a class="navHome" href="/index.html">Home</a>
+        <a class="navAll" href="/catalogue.html">Todas las cervezas</a>
+        <a class="navRandom" href="/detail.html?id=random">Cerveza random</a>
+      </nav>
+    </div>
     <section class="catalogue" id="catalogue"></section>
 
     <button id="previous" class="butonPage">Anterior</button>

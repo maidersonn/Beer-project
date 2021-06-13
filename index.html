@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beer Proyect</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Montez&family=Philosopher&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="homePage">
     <header>Beer Proyect</header>
     <div class="container">
       <h1>Cervezas del mundo</h1>
-      <h3>Más cerverza y menos berza !</h3>
+      <h3>{ cebada, lúpulo y levadura }</h3>
+
       <section class="introduction">
         ¿Te gusta la cerveza? ¿Quieres saber más sobre ellas? Aquí encontrarás
         información sobre todas las cervezas del mundo !
       </section>
-      <br />
-      <nav class="butons">
-        <a href="./index.html">Home</a>
-        <a href="./catalogue.html">Todas las cervezas</a>
-        <a href="./detail.html?id=random">Cerveza random</a>
-      </nav>
+      <div class="navFija">
+        <nav class="navButtons">
+          <a class="navHome" href="/index.html">Home</a>
+          <a class="navAll" href="/catalogue.html">Todas las cervezas</a>
+          <a class="navRandom" href="/detail.html?id=random">Cerveza random</a>
+        </nav>
+      </div>
 
       <div class="cervezaHome"></div>
     </div>

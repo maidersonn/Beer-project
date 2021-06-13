@@ -1,5 +1,5 @@
 .homePage {
-  background-image: url("./images/fondo2.jpg");
+  background-image: ;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -20,7 +20,8 @@ header {
 
 h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 80px;
+  font-family: "Montez", cursive;
 }
 h3 {
   text-align: center;
@@ -97,4 +98,55 @@ img {
 .beerInfo {
   max-width: 70%;
   text-align: center;
+}
+
+/* Navegacion */
+
+.navFija {
+  background: #fff;
+  height: 1px;
+  z-index: 999999;
+  margin: 0 auto;
+  border-bottom: 2px solid #dadada;
+  width: 25%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
+  padding: 15px 10px 30px 10px;
+}
+
+.navButtons a:visited,
+.navButtons a:link {
+  color: black;
+  text-decoration: none;
+}
+
+.navHome,
+.navAll {
+  padding-right: 20px;
+  border-right: 2px solid #dadada;
+}
+
+.navAll,
+.navRandom {
+  padding-left: 20px;
+}
+
+.itemName {
+  font-size: 24px;
+  font-family: "Lobster Two", cursive;
+}
+
+.itemTagline {
+  font-size: 18px;
+  font-family: "Philosopher", sans-serif;
+}
+.navButtons a:hover {
+  opacity: 0.5;
+}
+
+h3 {
+  font-family: "Satisfy", cursive;
+  font-size: 30px;
 }
