@@ -128,7 +128,7 @@ h3 {
   height: 1px;
   margin: 0 auto;
   border-bottom: 2px solid #dadada;
-  width: 25%;
+  width: 30%;
   position: fixed;
   top: 0;
   right: 0;
@@ -172,7 +172,7 @@ h3 {
 }
 
 .logo {
-  width: 76%;
+  width: 69%;
   text-align: left;
   font-size: 22px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -202,6 +202,7 @@ h3 {
 .detailInfo {
   max-width: 50%;
   text-align: left;
+  margin-top: 0 auto;
 }
 
 .detailInfo h3,
@@ -210,7 +211,8 @@ h4 {
 }
 
 .beerName {
-  font-size: 80px;
+  font-size: 70px;
+  margin-top: 0;
 }
 
 .beerTagline {
