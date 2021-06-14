@@ -21,6 +21,7 @@ const fillCatalogue = async (url, sectionToFill) => {
     const beerCard = createBeerCard(item);
     sectionToFill.append(beerCard);
   });
+  refreshPage(numPag);
 };
 
 let catalogue = document.getElementById("catalogue");
@@ -51,3 +52,6 @@ prevPage.addEventListener("click", () => {
     catalogue
   );
 });
+
+const refreshPage = (numPage) =>
+  (document.getElementById("numpage").innerHTML = "Página " + numPage);
