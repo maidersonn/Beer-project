@@ -3,7 +3,7 @@ name: deploy, build, vercel
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
