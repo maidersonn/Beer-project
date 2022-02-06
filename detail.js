@@ -3,7 +3,6 @@ const beerId = urlParams.get("id");
 
 const paintDetailBeer = async (id) => {
   const [beer] = await getData(`https://api.punkapi.com/v2/beers/${id}`);
-  console.log(beer);
 
   const detailFrame = document.getElementById("detailFrame");
   const imageBeer = document.createElement("img");
